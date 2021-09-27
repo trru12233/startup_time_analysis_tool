@@ -1,0 +1,892 @@
+[0.000001 0.000001] 
+[0.000680 0.000679] Horizon Robotic System Ver:x3j3_lnx_db_20210924 release  j3dvbx3-hynix2G-3200 /dev/ttyS0
+[0.001875 0.001195] j3dvbx3-hynix2G-3200 login: root
+[0.021496 0.019621] 7[r[999;999H[6nNOTICE:  fast_boot:0
+[1.303853 1.282357] 
+[1.303908 0.000055] S
+[1.304002 0.000094] F
+[1.304080 0.000078] L
+[1.304182 0.000102] O
+[1.304253 0.000071] NOTICE:  efuse cpu_cfg = 0
+[0.002225 0.002225] W
+[0.002326 0.000101] NOTICE:  Booting Trusted Firmware
+[0.006844 0.004518] NOTICE:  BL1: v1.4(release):HR-ROM-Rel-v1.1-141-ga91d4dd-dirty
+[0.011017 0.004173] NOTICE:  BL1: Built : 11:24:44, Oct 23 2019
+[0.012154 0.001137] NOTICE:  Waiting connect ...
+[0.013170 0.001016] NOTICE:  boot src: 0
+[0.188453 0.175283] NOTICE:  eMMC : 0x90
+[0.276744 0.088291] NOTICE:  BL1: Booting BL2
+[0.309626 0.032882] Auth pass
+[0.311418 0.001792] NOTICE:  bl1_main exit
+[0.313826 0.002408] SPL cold boot flow
+[0.315049 0.001223] check_reset_state (0): wakeup address = 0x0, hw wakeup status = 0x0, wakeup src=0x100
+[0.322106 0.007057] patch for sys_pll 1200 with 100M eth
+[0.325729 0.003623] SFLOW_INIT
+[0.326322 0.000593] CHIP ID:P63V45/WAFER: W06/ X: X39/ Y: Y16
+[0.327398 0.001076] secondary_jump_to_spl: secure chip flow
+[0.330685 0.003287] X3 SPL : secondary core wake up and jump to spl done (cpu_core_cfg=0)
+[0.337545 0.006860] SFLOW_FIN_HW_A
+[0.338570 0.001025] 
+[0.338618 0.000048] U-Boot SPL 2018.09-00877-gae22888d5c (Jul 09 2021 - 10:02:35 +0800)
+[0.340983 0.002365] SPACC Init - ID: (00000061)
+[0.341910 0.000927] SPL emmc boot mode (from strap)
+[0.342611 0.000701] emmc: width = 4, mclk = 96000000, sclk = 48000000
+[0.344005 0.001394] emmc div: 0x71 base+8: 0x1,width:1 width reg: 0x1
+[0.347300 0.003295] ***** using efuse ddr type ******
+[0.348665 0.001365] ddr_type = 1 (LPDDR4)
+[0.353574 0.004909] ddr_hdr.ecc_gran: 0x0
+[0.354540 0.000966] ddr_hdr.ecc_map: 0x0
+[0.354982 0.000442] ddr_hdr.sbr_pattern0: 0x3190681
+[0.355757 0.000775] ddr_hdr.sbr_pattern1: 0xd06a508
+[0.356556 0.000799] ***** using efuse vendor type *****
+[0.357639 0.001083] ***************** ddr auto detect **************
+[0.358723 0.001084] no ddr pin set
+[0.359339 0.000616] detect part number: ffff
+[0.361869 0.002530] detect ddr freq: 64
+[0.362891 0.001022] board id alternative:0x0
+[0.366200 0.003309] hb_ddr_index: 5
+[0.368504 0.002304] dram_pll_init
+[0.369657 0.001153] sscg disabled 
+[0.370308 0.000651] control load ddrc src_addr: b2800, load_addr: 802caa20, src_len: 878
+[0.372913 0.002605] [DDR INFO] 	==ddr_release_info==
+[0.373945 0.001032] [DDR INFO] 	VERSION:	develop
+[0.374554 0.000609] [DDR INFO] 	BUILD:		2021-07-09-10:02
+[0.375696 0.001142] [DDR INFO] 	GIT COMMIT:	ae22888d5cffd88a7ecf060c4a07a2e9635db8c4
+[0.377557 0.001861] [DDR INFO] 	GIT TIME:	Fri, 9 Jul 2021 09:59:32 +0800
+[0.379136 0.001579] [DDR INFO] 	==ddr_features==
+[0.379887 0.000751] [DDR INFO] 	RDBI:		0
+[0.380310 0.000423] [DDR INFO] 	WDBI:		1
+[0.380787 0.000477] [DDR INFO] 	InlineECC:	0
+[0.381108 0.000321] [DDR INFO] 	DM:		1
+[0.381325 0.000217] [DDR INFO] 	DDC:		1
+[0.381548 0.000223] [DDR INFO] 	SSCG:		0
+[0.382224 0.000676] [DDR INFO] 	BOARD:		XS_ENABLE
+[0.383329 0.001105] [DDR INFO] ddr_controller_cfg done
+[0.386796 0.003467] load ddr phy src_addr: b3200, load_addr: 802caa20, src_len: 388
+[0.389895 0.003099] ATxSlewRate	: 19f
+[0.390414 0.000519] ATxImpedance	: 3f
+[0.390863 0.000449] TxSlewRate	: 19f
+[0.391450 0.000587] TxOdtDrvStren	: e00
+[0.392041 0.000591] TxImpedanceCtrl	: 63f
+[0.392666 0.000625] CalDrvStr0	: 11
+[0.393155 0.000489] VrefInGlobal	: 1bc
+[0.393728 0.000573] board_type = 2 (J3_DVB)
+[0.394329 0.000601] load dqmap src addr: e0e00, load_addr: 802caa20, src_len: 20
+[0.396305 0.001976] load pie src_addr: b3600, load_addr: 802caa20, src_len: 11f8
+[0.398104 0.001799] [DDR INFO] sdram_info_detect: 279
+[0.398621 0.000517] lpddr4 mr5 (rank=0x0, MRCTRL0=0x11, MRSTAT=0x0, MSTR=0x83080020) : 0x6060606 0x6060606 0x6060606 0x6060606
+[0.400549 0.001928] lpddr4 mr8 (rank=0x0, MRCTRL0=0x11, MRSTAT=0x0, MSTR=0x83080020) : 0x10101010 0x10101010 0x10101010 0x10101010
+[0.402383 0.001834] get_ddr_mr_info:cs_num=1, mr5=0x6, mr8=0x10
+[0.403284 0.000901] [DDR INFO] sdram cs number: 2
+[0.403936 0.000652] [DDR INFO] sdram cs number: 1
+[0.404638 0.000702] [DDR INFO] sdram cs0 mr5 value: 0x6
+[0.405291 0.000653] [DDR INFO] sdram cs1 mr5 value: 0xff
+[0.406047 0.000756] [DDR INFO] sdram cs0 mr8 value: 0x10
+[0.406797 0.000750] [DDR INFO] sdram cs1 mr8 value: 0xff
+[0.407315 0.000518] ddr_freq = 00
+[0.407478 0.000163] board id = 00
+[0.407659 0.000181] ddr datarate: 3200
+[0.407865 0.000206] ### HYNIX DDR ###
+[0.408061 0.000196] no ddr pin set
+[0.408231 0.000170] detect part number: 610
+[0.408490 0.000259] detect ddr freq: c80
+[0.408738 0.000248] board id alternative:0x0
+[0.409006 0.000268] hb_ddr_index: 11
+[0.409191 0.000185] ddr_type = 1, ddr_vendor=1, ddr_freq=3200
+[0.409760 0.000569] dram_pll_init
+[0.409924 0.000164] sscg disabled 
+[0.410167 0.000243] control load ddrc src_addr: c4a00, load_addr: 802caa20, src_len: 910
+[0.410941 0.000774] [DDR INFO] 	==ddr_release_info==
+[0.411293 0.000352] [DDR INFO] 	VERSION:	develop
+[0.411629 0.000336] [DDR INFO] 	BUILD:		2021-07-09-10:02
+[0.412022 0.000393] [DDR INFO] 	GIT COMMIT:	ae22888d5cffd88a7ecf060c4a07a2e9635db8c4
+[0.412744 0.000722] [DDR INFO] 	GIT TIME:	Fri, 9 Jul 2021 09:59:32 +0800
+[0.413319 0.000575] [DDR INFO] 	==ddr_features==
+[0.413630 0.000311] [DDR INFO] 	RDBI:		0
+[0.413857 0.000227] [DDR INFO] 	WDBI:		1
+[0.414177 0.000320] [DDR INFO] 	InlineECC:	0
+[0.414456 0.000279] [DDR INFO] 	DM:		1
+[0.414663 0.000207] [DDR INFO] 	DDC:		1
+[0.414875 0.000212] [DDR INFO] 	SSCG:		0
+[0.415125 0.000250] [DDR INFO] 	BOARD:		XS_ENABLE
+[0.415443 0.000318] [DDR INFO] ddr_controller_cfg done
+[0.415809 0.000366] load ddr phy src_addr: c5400, load_addr: 802caa20, src_len: 420
+[0.417137 0.001328] ATxSlewRate	: 15f
+[0.417564 0.000427] ATxImpedance	: 7f
+[0.417800 0.000236] TxSlewRate	: 17f
+[0.417990 0.000190] TxOdtDrvStren	: 200
+[0.418403 0.000413] TxImpedanceCtrl	: e3f
+[0.418899 0.000496] CalDrvStr0	: 11
+[0.419206 0.000307] VrefInGlobal	: 104
+[0.419420 0.000214] board_type = 2 (J3_DVB)
+[0.419683 0.000263] load dqmap src addr: e0e00, load_addr: 802caa20, src_len: 20
+[0.420778 0.001095] [DDR INFO] dwc_ddrphy_train start
+[0.421503 0.000725] magic = 544f4248
+[0.421838 0.000335] load imem1 src_addr: a1a00, load_addr: 802caa20, src_len: 8000
+[0.422922 0.001084] load dmem1 src_addr: c3c00, load_addr: 802caa20, src_len: 684
+[0.423760 0.000838] executing 1D fw
+[0.423998 0.000238] ddr_init:3250#####
+[0.424417 0.000419] load imem2 src_addr: a9a00, load_addr: 802caa20, src_len: 8000
+[0.425111 0.000694] load dmem2 src_addr: c4400, load_addr: 802caa20, src_len: 564
+[0.425760 0.000649] 
+[0.425779 0.000019] *******************************************************
+[0.426436 0.000657] p_dmem_lpddr4_2d_16b->MR11_A0:43
+[0.426789 0.000353] p_dmem_lpddr4_2d_16b->MR14_A0:4c
+[0.427182 0.000393] p_dmem_lpddr4_2d_16b->MR12_A0:4c
+[0.427529 0.000347] p_dmem_lpddr4_2d_16b->MR22_A0:14
+[0.427880 0.000351] 
+[0.427899 0.000019] p_dmem_lpddr4_2d_16b->MR3_A0:b3
+[0.428688 0.000789] p_dmem_lpddr4_2d_16b->Reserved00:40
+[0.429120 0.000432] p_dmem_lpddr4_2d_16b->Reserved0E:4
+[0.429493 0.000373] p_dmem_lpddr4_2d_16b->Delay_Weight2D:20
+[0.429910 0.000417] p_dmem_lpddr4_2d_16b->Voltage_Weight2D:80
+[0.430524 0.000614] *******************************************************
+[0.431703 0.001179] 
+[0.431727 0.000024] executing 2D fw
+[0.549188 0.117461] ddr_init:3253#####
+[0.549765 0.000577] load pie src_addr: c5a00, load_addr: 802caa20, src_len: 11f0
+[0.551388 0.001623] no magic in efuse file,bypass efuse
+[0.551890 0.000502] Set QoS.
+[0.552022 0.000132] total_sz = 2048
+[0.552359 0.000337] SPL_VERSION:7
+[0.552624 0.000265] boot reason: normal
+[0.552846 0.000222] ota check count:25
+[0.554874 0.002028] uboot partition is uboot_A
+[0.555230 0.000356] load u-boot: src_addr=0x184c00, dest_addr=0x4000000, len=262144
+[0.555945 0.000715] load_bl33_img:213
+[0.569109 0.013164] load_bl33_img:215
+[0.573925 0.004816] load_bl33_img:220
+[0.574176 0.000251] load warm boot spl: addr=0x44c00, dest_addr=0x80000000, len=30208
+[0.574955 0.000779] load_warm_spl_img:291
+[0.577877 0.002922] load_warm_spl_img:293
+[0.578973 0.001096] load_warm_spl_img:307
+[0.579251 0.000278] load bl31: addr=0x104c00, dest_addr=0x0, len=82816
+[0.579835 0.000584] load_bl31_img:345
+[0.586014 0.006179] load_bl31_img:347
+[0.586306 0.000292] load_bl31_img read_bytes:14400
+[0.586919 0.000613] SFLOW_AUTH_BL31
+[0.598389 0.011470] verify signature of header:  verify ok!
+[0.608520 0.010131] verify signature of image:  verify ok!
+[0.609038 0.000518] load_bl31_img:352
+[0.609239 0.000201] bypass bpu image
+[0.609479 0.000240] clear keybank!!!!
+[0.609680 0.000201] SFLOW_DBG_EN
+[0.613401 0.003721] Trying to boot from RAM
+[0.613765 0.000364] SPL: bl31 will jump to u-boot or other entry (0x4000000)
+[0.614404 0.000639] SFLOW_CLR_KEY
+[0.614576 0.000172] SFLOW_REG_LD
+[0.614723 0.000147] install_portal copy portal
+[0.615008 0.000285] install_portal call smc and jump to bl31 cold entry(0x0)
+[0.660855 0.045847] 
+[0.661013 0.000158] 
+[0.661077 0.000064] U-Boot 2018.09-00009-g86d73f8ccd-dirty (Sep 27 2021 - 10:32:45 +0800)
+[0.662334 0.001257] 
+[0.662358 0.000024] DRAM:  system DDR size: 0x7fe00000
+[0.665385 0.003027] 2 GiB
+[0.682210 0.016825] wake up cpu: core1
+[0.683103 0.000893] MMC:   emmc host clock set 192000000.
+[0.695708 0.012605] cpu1: *** Warning - Quick boot mode, using default environment
+[0.712273 0.016565] hb_upmode=golden, hb_bootreason=normal
+[0.719059 0.006786] core0:load EMMC boot_partition=boot,command=watchdog on; mmc read 10000000 1126 2800
+[0.720363 0.001304] enable watchdog success !
+[0.720715 0.000352] 
+[0.720740 0.000025] MMC read: dev # 0, block # 4390, count 10240 ... 10240 blocks read: OK
+[0.754915 0.034175] core0 wait for env set...OK
+[0.767080 0.012165] Warning: ethernet@A5014000 address not set.
+[0.768158 0.001078] Disable cnn cores ..
+[0.768813 0.000655] base board type: J3 DVB
+[0.769192 0.000379] bootmode: EMMC
+[0.769360 0.000168] board_id = 11520000
+[0.769619 0.000259] uboot: normal boot 
+[0.769838 0.000219] boot partition: boot, system partition: system
+[0.770336 0.000498] mmc reg:5010008H=0,A1000320H=0x70
+[0.772170 0.001834] ### main_loop: bootcmd="bootm 0x10000000;"
+[0.772801 0.000631] Hit any key to stop autoboot:  0, Skip bootdelay...
+[0.773338 0.000537] ## Booting Android Image at 0x10000000 ...
+[0.773889 0.000551] Android's image name: x3j3
+[0.774177 0.000288] Kernel load addr 0x00200000 size 4771 KiB
+[0.774646 0.000469] board_type = 202
+[0.774832 0.000186] dtb_name = hobot-j3-dvb.dtb
+[0.775128 0.000296]    Uncompressing Kernel Image ...    OK
+[0.805591 0.030463]    kernel loaded to 0x00200000, end = 0x00ae9808
+[0.816862 0.011271]    Loading Device Tree to 0000000003c00000, end 0000000003c1ffff ... OK
+[0.818357 0.001495] chip_id: 0
+[0.819552 0.001195] Ion Heap type CMA Mem
+[0.819844 0.000292] Orign(MAX) bpu model Reserve Mem Size to 64M!!
+[0.848188 0.028344] waiting for salve cpu: core1 complete...OK
+[0.848818 0.000630] 
+[0.848871 0.000053] Starting kernel ...
+[0.849937 0.001066] 
+[1.606956 0.757019] Starting udev
+[1.768321 0.161365] normal APP runing mode...
+[1.769816 0.001495] /etc/init.d/appinit.sh: line 15: can't create /sys/module/kgdboc/parameters/kgdboc: nonexistent directory
+[1.979937 0.210121] [    1.025674] devfreq devfreq1: Couldn't update frequency transition information.
+[1.992087 0.012150] [    1.039942] hobot_fusa: hobot fusa fatal api start
+[1.992826 0.000739] [    1.040610] hobot_fusa: 1111period:20000000 duty:10000000
+[1.993836 0.001010] [    1.042542] fusa_fatal soc:fusa_fatal: Suc V0.1
+[2.351765 0.357929] /dev/mmcblk0p11 file system is ext4
+[2.405885 0.054120] /dev/mmcblk0p12 file system is ext4
+[2.448200 0.042315] 
+[2.450184 0.001984] Horizon Robotic System Ver:x3j3_lnx_db_20210924 release  j3dvbx3-hynix2G-3200 /dev/ttyS0
+(2021-09-27 15:51:30)===>bootrom=0.339, spl=0.322, uboot=0.188, app=1.768, console=2.450<=== num:1
+[5.656708 3.206524] j3dvbx3-hynix2G-3200 login: 
+[5.657823 0.001115] Horizon Robotic System Ver:x3j3_lnx_db_20210924 release  j3dvbx3-hynix2G-3200 /dev/ttyS0
+(2021-09-27 15:51:34)===>bootrom=0.339, spl=0.322, uboot=0.188, app=1.768, console=5.658<=== num:2
+[8.865999 3.208176] j3dvbx3-hynix2G-3200 login: root
+[8.867518 0.001519] 7[r[999;999H[6n8root@j3dvbx3-hynix2G-3200:~# root
+[8.869420 0.001902] -sh: root: not found
+[8.869850 0.000430] root@j3dvbx3-hynix2G-3200:~# reboot
+[8.934332 0.064482] [    7.983120] reboot: Restarting system with command ''
+[8.973783 0.039451] NOTICE:  fast_boot:0
+[8.976382 0.002599] 
+[8.976581 0.000199] S
+[8.976689 0.000108] F
+[8.976777 0.000088] L
+[8.977686 0.000909] O
+[8.978019 0.000333] NOTICE:  efuse cpu_cfg = 0
+[0.000639 0.000639] W
+[0.000705 0.000066] NOTICE:  Booting Trusted Firmware
+[0.001591 0.000886] NOTICE:  BL1: v1.4(release):HR-ROM-Rel-v1.1-141-ga91d4dd-dirty
+[0.002722 0.001131] NOTICE:  BL1: Built : 11:24:44, Oct 23 2019
+[0.003726 0.001004] NOTICE:  boot src: 0
+[0.022789 0.019063] NOTICE:  eMMC : 0x90
+[0.111517 0.088728] NOTICE:  BL1: Booting BL2
+[0.148884 0.037367] Auth pass
+[0.149586 0.000702] NOTICE:  bl1_main exit
+[0.150429 0.000843] SPL normal reset flow
+[0.151274 0.000845] check_reset_state (2): wakeup address = 0x0, hw wakeup status = 0x3, wakeup src=0x100
+[0.153968 0.002694] patch for sys_pll 1200 with 100M eth
+[0.155644 0.001676] SFLOW_INIT
+[0.156033 0.000389] CHIP ID:P63V45/WAFER: W06/ X: X39/ Y: Y16
+[0.157364 0.001331] secondary_jump_to_spl: secure chip flow
+[0.158474 0.001110] X3 SPL : secondary core wake up and jump to spl done (cpu_core_cfg=0)
+[0.160430 0.001956] SFLOW_FIN_HW_A
+[0.160868 0.000438] 
+[0.160911 0.000043] U-Boot SPL 2018.09-00877-gae22888d5c (Jul 09 2021 - 10:02:35 +0800)
+[0.163356 0.002445] SPACC Init - ID: (00000061)
+[0.164555 0.001199] SPL emmc boot mode (from strap)
+[0.166482 0.001927] emmc: width = 4, mclk = 96000000, sclk = 48000000
+[0.170315 0.003833] emmc div: 0x71 base+8: 0x1,width:1 width reg: 0x1
+[0.172363 0.002048] ***** using efuse ddr type ******
+[0.173739 0.001376] ddr_type = 1 (LPDDR4)
+[0.174959 0.001220] ddr_hdr.ecc_gran: 0x0
+[0.175662 0.000703] ddr_hdr.ecc_map: 0x0
+[0.176469 0.000807] ddr_hdr.sbr_pattern0: 0x0
+[0.177171 0.000702] ddr_hdr.sbr_pattern1: 0x0
+[0.178118 0.000947] ***** using efuse vendor type *****
+[0.179454 0.001336] ***************** ddr auto detect **************
+[0.181043 0.001589] no ddr pin set
+[0.182046 0.001003] detect part number: ffff
+[0.183066 0.001020] detect ddr freq: 64
+[0.183864 0.000798] board id alternative:0x0
+[0.184576 0.000712] hb_ddr_index: 5
+[0.185056 0.000480] dram_pll_init
+[0.185385 0.000329] sscg disabled 
+[0.186080 0.000695] control load ddrc src_addr: b2800, load_addr: 802caa20, src_len: 878
+[0.187875 0.001795] [DDR INFO] 	==ddr_release_info==
+[0.188687 0.000812] [DDR INFO] 	VERSION:	develop
+[0.189372 0.000685] [DDR INFO] 	BUILD:		2021-07-09-10:02
+[0.190522 0.001150] [DDR INFO] 	GIT COMMIT:	ae22888d5cffd88a7ecf060c4a07a2e9635db8c4
+[0.192119 0.001597] [DDR INFO] 	GIT TIME:	Fri, 9 Jul 2021 09:59:32 +0800
+[0.193895 0.001776] [DDR INFO] 	==ddr_features==
+[0.194832 0.000937] [DDR INFO] 	RDBI:		0
+[0.195416 0.000584] [DDR INFO] 	WDBI:		1
+[0.195739 0.000323] [DDR INFO] 	InlineECC:	0
+[0.196108 0.000369] [DDR INFO] 	DM:		1
+[0.196768 0.000660] [DDR INFO] 	DDC:		1
+[0.197690 0.000922] [DDR INFO] 	SSCG:		0
+[0.198831 0.001141] [DDR INFO] 	BOARD:		XS_ENABLE
+[0.199784 0.000953] [DDR INFO] ddr_controller_cfg done
+[0.200570 0.000786] load ddr phy src_addr: b3200, load_addr: 802caa20, src_len: 388
+[0.202099 0.001529] ATxSlewRate	: 19f
+[0.202533 0.000434] ATxImpedance	: 3f
+[0.203180 0.000647] TxSlewRate	: 19f
+[0.203579 0.000399] TxOdtDrvStren	: e00
+[0.204125 0.000546] TxImpedanceCtrl	: 63f
+[0.204631 0.000506] CalDrvStr0	: 11
+[0.205239 0.000608] VrefInGlobal	: 1bc
+[0.205787 0.000548] board_type = 2 (J3_DVB)
+[0.206526 0.000739] load dqmap src addr: e0e00, load_addr: 802caa20, src_len: 20
+[0.209140 0.002614] load pie src_addr: b3600, load_addr: 802caa20, src_len: 11f8
+[0.211225 0.002085] [DDR INFO] sdram_info_detect: 279
+[0.212185 0.000960] lpddr4 mr5 (rank=0x0, MRCTRL0=0x11, MRSTAT=0x0, MSTR=0x83080020) : 0x6060606 0x6060606 0x6060606 0x6060606
+[0.216667 0.004482] lpddr4 mr8 (rank=0x0, MRCTRL0=0x11, MRSTAT=0x0, MSTR=0x83080020) : 0x10101010 0x10101010 0x10101010 0x10101010
+[0.219194 0.002527] get_ddr_mr_info:cs_num=1, mr5=0x6, mr8=0x10
+[0.220192 0.000998] [DDR INFO] sdram cs number: 2
+[0.221334 0.001142] [DDR INFO] sdram cs number: 1
+[0.222385 0.001051] [DDR INFO] sdram cs0 mr5 value: 0x6
+[0.223469 0.001084] [DDR INFO] sdram cs1 mr5 value: 0xff
+[0.224431 0.000962] [DDR INFO] sdram cs0 mr8 value: 0x10
+[0.225469 0.001038] [DDR INFO] sdram cs1 mr8 value: 0xff
+[0.226580 0.001111] ddr_freq = 00
+[0.227383 0.000803] board id = 00
+[0.228027 0.000644] ddr datarate: 3200
+[0.228592 0.000565] ### HYNIX DDR ###
+[0.229205 0.000613] no ddr pin set
+[0.229719 0.000514] detect part number: 610
+[0.230508 0.000789] detect ddr freq: c80
+[0.231255 0.000747] board id alternative:0x0
+[0.232227 0.000972] hb_ddr_index: 11
+[0.232789 0.000562] ddr_type = 1, ddr_vendor=1, ddr_freq=3200
+[0.234126 0.001337] dram_pll_init
+[0.234502 0.000376] sscg disabled 
+[0.235142 0.000640] control load ddrc src_addr: c4a00, load_addr: 802caa20, src_len: 910
+[0.239518 0.004376] [DDR INFO] 	==ddr_release_info==
+[0.241623 0.002105] [DDR INFO] 	VERSION:	develop
+[0.242584 0.000961] [DDR INFO] 	BUILD:		2021-07-09-10:02
+[0.243887 0.001303] [DDR INFO] 	GIT COMMIT:	ae22888d5cffd88a7ecf060c4a07a2e9635db8c4
+[0.245789 0.001902] [DDR INFO] 	GIT TIME:	Fri, 9 Jul 2021 09:59:32 +0800
+[0.248286 0.002497] [DDR INFO] 	==ddr_features==
+[0.249982 0.001696] [DDR INFO] 	RDBI:		0
+[0.251009 0.001027] [DDR INFO] 	WDBI:		1
+[0.251680 0.000671] [DDR INFO] 	InlineECC:	0
+[0.252438 0.000758] [DDR INFO] 	DM:		1
+[0.253177 0.000739] [DDR INFO] 	DDC:		1
+[0.253866 0.000689] [DDR INFO] 	SSCG:		0
+[0.254467 0.000601] [DDR INFO] 	BOARD:		XS_ENABLE
+[0.255369 0.000902] [DDR INFO] ddr_controller_cfg done
+[0.256473 0.001104] load ddr phy src_addr: c5400, load_addr: 802caa20, src_len: 420
+[0.258450 0.001977] ATxSlewRate	: 15f
+[0.258999 0.000549] ATxImpedance	: 7f
+[0.259510 0.000511] TxSlewRate	: 17f
+[0.260081 0.000571] TxOdtDrvStren	: 200
+[0.260776 0.000695] TxImpedanceCtrl	: e3f
+[0.261398 0.000622] CalDrvStr0	: 11
+[0.261910 0.000512] VrefInGlobal	: 104
+[0.262488 0.000578] board_type = 2 (J3_DVB)
+[0.263233 0.000745] load dqmap src addr: e0e00, load_addr: 802caa20, src_len: 20
+[0.265280 0.002047] [DDR INFO] dwc_ddrphy_train start
+[0.266469 0.001189] magic = 544f4248
+[0.267162 0.000693] load imem1 src_addr: a1a00, load_addr: 802caa20, src_len: 8000
+[0.268994 0.001832] load dmem1 src_addr: c3c00, load_addr: 802caa20, src_len: 684
+[0.270798 0.001804] executing 1D fw
+[0.271416 0.000618] ddr_init:3250#####
+[0.272139 0.000723] load imem2 src_addr: a9a00, load_addr: 802caa20, src_len: 8000
+[0.274243 0.002104] load dmem2 src_addr: c4400, load_addr: 802caa20, src_len: 564
+[0.277886 0.003643] 
+[0.277945 0.000059] *******************************************************
+[0.279359 0.001414] p_dmem_lpddr4_2d_16b->MR11_A0:43
+[0.280409 0.001050] p_dmem_lpddr4_2d_16b->MR14_A0:4c
+[0.281460 0.001051] p_dmem_lpddr4_2d_16b->MR12_A0:4c
+[0.282561 0.001101] p_dmem_lpddr4_2d_16b->MR22_A0:14
+[0.284080 0.001519] 
+[0.284178 0.000098] p_dmem_lpddr4_2d_16b->MR3_A0:b3
+[0.286423 0.002245] p_dmem_lpddr4_2d_16b->Reserved00:40
+[0.289363 0.002940] p_dmem_lpddr4_2d_16b->Reserved0E:4
+[0.290913 0.001550] p_dmem_lpddr4_2d_16b->Delay_Weight2D:20
+[0.292562 0.001649] p_dmem_lpddr4_2d_16b->Voltage_Weight2D:80
+[0.295577 0.003015] *******************************************************
+[0.297893 0.002316] 
+[0.297971 0.000078] executing 2D fw
+[0.390118 0.092147] ddr_init:3253#####
+[0.391036 0.000918] load pie src_addr: c5a00, load_addr: 802caa20, src_len: 11f0
+[0.393788 0.002752] no magic in efuse file,bypass efuse
+[0.395496 0.001708] Set QoS.
+[0.395896 0.000400] total_sz = 2048
+[0.396739 0.000843] SPL_VERSION:7
+[0.397415 0.000676] boot reason: normal
+[0.398349 0.000934] ota check count:25
+[0.400600 0.002251] uboot partition is uboot_A
+[0.406349 0.005749] load u-boot: src_addr=0x184c00, dest_addr=0x4000000, len=262144
+[0.411885 0.005536] load_bl33_img:213
+[0.412478 0.000593] load_bl33_img:215
+[0.412923 0.000445] load_bl33_img:220
+[0.416321 0.003398] load warm boot spl: addr=0x44c00, dest_addr=0x80000000, len=30208
+[0.418311 0.001990] load_warm_spl_img:291
+[0.419094 0.000783] load_warm_spl_img:293
+[0.421046 0.001952] load_warm_spl_img:307
+[0.421771 0.000725] load bl31: addr=0x104c00, dest_addr=0x0, len=82816
+[0.423614 0.001843] load_bl31_img:345
+[0.424159 0.000545] load_bl31_img:347
+[0.424737 0.000578] load_bl31_img read_bytes:14400
+[0.425702 0.000965] SFLOW_AUTH_BL31
+[0.433912 0.008210] verify signature of header:  verify ok!
+[0.445289 0.011377] verify signature of image:  verify ok!
+[0.446617 0.001328] load_bl31_img:352
+[0.447183 0.000566] bypass bpu image
+[0.447636 0.000453] clear keybank!!!!
+[0.447955 0.000319] SFLOW_DBG_EN
+[0.450186 0.002231] Trying to boot from RAM
+[0.451065 0.000879] SPL: bl31 will jump to u-boot or other entry (0x4000000)
+[0.453122 0.002057] SFLOW_CLR_KEY
+[0.453691 0.000569] SFLOW_REG_LD
+[0.454133 0.000442] install_portal copy portal
+[0.455139 0.001006] install_portal call smc and jump to bl31 cold entry(0x0)
+[0.498274 0.043135] 
+[0.503917 0.005643] 
+[0.504195 0.000278] U-Boot 2018.09-00009-g86d73f8ccd-dirty (Sep 27 2021 - 10:32:45 +0800)
+[0.506631 0.002436] 
+[0.506693 0.000062] DRAM:  system DDR size: 0x7fe00000
+[0.507665 0.000972] 2 GiB
+[0.518882 0.011217] wake up cpu: core1
+[0.524602 0.005720] MMC:   emmc host clock set 192000000.
+[0.535362 0.010760] cpu1: *** Warning - Quick boot mode, using default environment
+[0.551943 0.016581] hb_upmode=golden, hb_bootreason=normal
+[0.562093 0.010150] core0:load EMMC boot_partition=boot,command=watchdog on; mmc read 10000000 1126 2800
+[0.572869 0.010776] enable watchdog success !
+[0.574421 0.001552] 
+[0.574647 0.000226] MMC read: dev # 0, block # 4390, count 10240 ... 10240 blocks read: OK
+[0.592377 0.017730] core0 wait for env set...OK
+[0.603102 0.010725] Warning: ethernet@A5014000 address not set.
+[0.604991 0.001889] Disable cnn cores ..
+[0.606791 0.001800] base board type: J3 DVB
+[0.607886 0.001095] bootmode: EMMC
+[0.609041 0.001155] board_id = 11520000
+[0.610006 0.000965] uboot: normal boot 
+[0.611022 0.001016] boot partition: boot, system partition: system
+[0.613236 0.002214] mmc reg:5010008H=0,A1000320H=0x70
+[0.614846 0.001610] ### main_loop: bootcmd="bootm 0x10000000;"
+[0.616139 0.001293] Hit any key to stop autoboot:  0, Skip bootdelay...
+[0.617730 0.001591] ## Booting Android Image at 0x10000000 ...
+[0.618641 0.000911] Android's image name: x3j3
+[0.619187 0.000546] Kernel load addr 0x00200000 size 4771 KiB
+[0.620031 0.000844] board_type = 202
+[0.621077 0.001046] dtb_name = hobot-j3-dvb.dtb
+[0.623166 0.002089]    Uncompressing Kernel Image ...    OK
+[0.642301 0.019135]    kernel loaded to 0x00200000, end = 0x00ae9808
+[0.653479 0.011178]    Loading Device Tree to 0000000003c00000, end 0000000003c1ffff ... OK
+[0.656692 0.003213] chip_id: 0
+[0.657114 0.000422] Ion Heap type CMA Mem
+[0.657638 0.000524] Orign(MAX) bpu model Reserve Mem Size to 64M!!
+[0.683789 0.026151] waiting for salve cpu: core1 complete...OK
+[0.685385 0.001596] 
+[0.685431 0.000046] Starting kernel ...
+[0.685788 0.000357] 
+[1.438037 0.752249] Starting udev
+[1.593417 0.155380] normal APP runing mode...
+[1.594320 0.000903] /etc/init.d/appinit.sh: line 15: can't create /sys/module/kgdboc/parameters/kgdboc: nonexistent directory
+[1.891929 0.297609] [    1.099734] devfreq devfreq1: Couldn't update frequency transition information.
+[1.904213 0.012284] [    1.110097] hobot_fusa: hobot fusa fatal api start
+[1.906238 0.002025] [    1.110758] hobot_fusa: 1111period:20000000 duty:10000000
+[1.908655 0.002417] [    1.111666] fusa_fatal soc:fusa_fatal: Suc V0.1
+[2.208698 0.300043] /dev/mmcblk0p11 file system is ext4
+[2.265036 0.056338] /dev/mmcblk0p12 file system is ext4
+[2.297652 0.032616] 
+[2.299547 0.001895] Horizon Robotic System Ver:x3j3_lnx_db_20210924 release  j3dvbx3-hynix2G-3200 /dev/ttyS0
+(2021-09-27 15:51:39)===>bootrom=0.161, spl=0.343, uboot=0.181, app=1.593, console=2.300<=== num:3
+[5.513273 3.213726] j3dvbx3-hynix2G-3200 login: 
+[5.514363 0.001090] Horizon Robotic System Ver:x3j3_lnx_db_20210924 release  j3dvbx3-hynix2G-3200 /dev/ttyS0
+(2021-09-27 15:51:43)===>bootrom=0.161, spl=0.343, uboot=0.181, app=1.593, console=5.514<=== num:4
+[8.724721 3.210358] j3dvbx3-hynix2G-3200 login: root
+[8.726880 0.002159] 7[r[999;999H[6n8root@j3dvbx3-hynix2G-3200:~# root
+[8.728987 0.002107] -sh: root: not found
+[8.729662 0.000675] root@j3dvbx3-hynix2G-3200:~# reboot
+[8.799954 0.070292] [    8.012040] reboot: Restarting system with command ''
+[8.840886 0.040932] NOTICE:  fast_boot:0
+[8.843804 0.002918] 
+[8.843883 0.000079] S
+[8.843995 0.000112] F
+[8.844079 0.000084] L
+[8.844146 0.000067] O
+[8.844280 0.000134] NOTICE:  efuse cpu_cfg = 0
+[0.000728 0.000728] W
+[0.000782 0.000054] NOTICE:  Booting Trusted Firmware
+[0.001520 0.000738] NOTICE:  BL1: v1.4(release):HR-ROM-Rel-v1.1-141-ga91d4dd-dirty
+[0.003074 0.001554] NOTICE:  BL1: Built : 11:24:44, Oct 23 2019
+[0.004646 0.001572] NOTICE:  boot src: 0
+[0.022239 0.017593] NOTICE:  eMMC : 0x90
+[0.110857 0.088618] NOTICE:  BL1: Booting BL2
+[0.147765 0.036908] Auth pass
+[0.148178 0.000413] NOTICE:  bl1_main exit
+[0.148982 0.000804] SPL normal reset flow
+[0.149619 0.000637] check_reset_state (2): wakeup address = 0x0, hw wakeup status = 0x3, wakeup src=0x100
+[0.151678 0.002059] patch for sys_pll 1200 with 100M eth
+[0.153048 0.001370] SFLOW_INIT
+[0.153489 0.000441] CHIP ID:P63V45/WAFER: W06/ X: X39/ Y: Y16
+[0.154797 0.001308] secondary_jump_to_spl: secure chip flow
+[0.155965 0.001168] X3 SPL : secondary core wake up and jump to spl done (cpu_core_cfg=0)
+[0.157898 0.001933] SFLOW_FIN_HW_A
+[0.158378 0.000480] 
+[0.158445 0.000067] U-Boot SPL 2018.09-00877-gae22888d5c (Jul 09 2021 - 10:02:35 +0800)
+[0.160389 0.001944] SPACC Init - ID: (00000061)
+[0.161183 0.000794] SPL emmc boot mode (from strap)
+[0.162675 0.001492] emmc: width = 4, mclk = 96000000, sclk = 48000000
+[0.169685 0.007010] emmc div: 0x71 base+8: 0x1,width:1 width reg: 0x1
+[0.171829 0.002144] ***** using efuse ddr type ******
+[0.172870 0.001041] ddr_type = 1 (LPDDR4)
+[0.173308 0.000438] ddr_hdr.ecc_gran: 0x0
+[0.174207 0.000899] ddr_hdr.ecc_map: 0x0
+[0.174988 0.000781] ddr_hdr.sbr_pattern0: 0x0
+[0.176232 0.001244] ddr_hdr.sbr_pattern1: 0x0
+[0.177116 0.000884] ***** using efuse vendor type *****
+[0.179191 0.002075] ***************** ddr auto detect **************
+[0.181972 0.002781] no ddr pin set
+[0.182508 0.000536] detect part number: ffff
+[0.183218 0.000710] detect ddr freq: 64
+[0.183910 0.000692] board id alternative:0x0
+[0.184705 0.000795] hb_ddr_index: 5
+[0.185292 0.000587] dram_pll_init
+[0.185544 0.000252] sscg disabled 
+[0.185770 0.000226] control load ddrc src_addr: b2800, load_addr: 802caa20, src_len: 878
+[0.186820 0.001050] [DDR INFO] 	==ddr_release_info==
+[0.187298 0.000478] [DDR INFO] 	VERSION:	develop
+[0.188193 0.000895] [DDR INFO] 	BUILD:		2021-07-09-10:02
+[0.189438 0.001245] [DDR INFO] 	GIT COMMIT:	ae22888d5cffd88a7ecf060c4a07a2e9635db8c4
+[0.191166 0.001728] [DDR INFO] 	GIT TIME:	Fri, 9 Jul 2021 09:59:32 +0800
+[0.192478 0.001312] [DDR INFO] 	==ddr_features==
+[0.193546 0.001068] [DDR INFO] 	RDBI:		0
+[0.194232 0.000686] [DDR INFO] 	WDBI:		1
+[0.195083 0.000851] [DDR INFO] 	InlineECC:	0
+[0.195771 0.000688] [DDR INFO] 	DM:		1
+[0.197324 0.001553] [DDR INFO] 	DDC:		1
+[0.198011 0.000687] [DDR INFO] 	SSCG:		0
+[0.198616 0.000605] [DDR INFO] 	BOARD:		XS_ENABLE
+[0.199724 0.001108] [DDR INFO] ddr_controller_cfg done
+[0.200729 0.001005] load ddr phy src_addr: b3200, load_addr: 802caa20, src_len: 388
+[0.202656 0.001927] ATxSlewRate	: 19f
+[0.203131 0.000475] ATxImpedance	: 3f
+[0.203661 0.000530] TxSlewRate	: 19f
+[0.203938 0.000277] TxOdtDrvStren	: e00
+[0.204249 0.000311] TxImpedanceCtrl	: 63f
+[0.204642 0.000393] CalDrvStr0	: 11
+[0.205034 0.000392] VrefInGlobal	: 1bc
+[0.205871 0.000837] board_type = 2 (J3_DVB)
+[0.207075 0.001204] load dqmap src addr: e0e00, load_addr: 802caa20, src_len: 20
+[0.208119 0.001044] load pie src_addr: b3600, load_addr: 802caa20, src_len: 11f8
+[0.209102 0.000983] [DDR INFO] sdram_info_detect: 279
+[0.209740 0.000638] lpddr4 mr5 (rank=0x0, MRCTRL0=0x11, MRSTAT=0x0, MSTR=0x83080020) : 0x6060606 0x6060606 0x6060606 0x6060606
+[0.212524 0.002784] lpddr4 mr8 (rank=0x0, MRCTRL0=0x11, MRSTAT=0x0, MSTR=0x83080020) : 0x10101010 0x10101010 0x10101010 0x10101010
+[0.216054 0.003530] get_ddr_mr_info:cs_num=1, mr5=0x6, mr8=0x10
+[0.217254 0.001200] [DDR INFO] sdram cs number: 2
+[0.218004 0.000750] [DDR INFO] sdram cs number: 1
+[0.218936 0.000932] [DDR INFO] sdram cs0 mr5 value: 0x6
+[0.220165 0.001229] [DDR INFO] sdram cs1 mr5 value: 0xff
+[0.221462 0.001297] [DDR INFO] sdram cs0 mr8 value: 0x10
+[0.222083 0.000621] [DDR INFO] sdram cs1 mr8 value: 0xff
+[0.222640 0.000557] ddr_freq = 00
+[0.222861 0.000221] board id = 00
+[0.223340 0.000479] ddr datarate: 3200
+[0.224048 0.000708] ### HYNIX DDR ###
+[0.224703 0.000655] no ddr pin set
+[0.225344 0.000641] detect part number: 610
+[0.226414 0.001070] detect ddr freq: c80
+[0.227103 0.000689] board id alternative:0x0
+[0.229039 0.001936] hb_ddr_index: 11
+[0.230437 0.001398] ddr_type = 1, ddr_vendor=1, ddr_freq=3200
+[0.232217 0.001780] dram_pll_init
+[0.232851 0.000634] sscg disabled 
+[0.233390 0.000539] control load ddrc src_addr: c4a00, load_addr: 802caa20, src_len: 910
+[0.235551 0.002161] [DDR INFO] 	==ddr_release_info==
+[0.236652 0.001101] [DDR INFO] 	VERSION:	develop
+[0.237764 0.001112] [DDR INFO] 	BUILD:		2021-07-09-10:02
+[0.238828 0.001064] [DDR INFO] 	GIT COMMIT:	ae22888d5cffd88a7ecf060c4a07a2e9635db8c4
+[0.241380 0.002552] [DDR INFO] 	GIT TIME:	Fri, 9 Jul 2021 09:59:32 +0800
+[0.242595 0.001215] [DDR INFO] 	==ddr_features==
+[0.243369 0.000774] [DDR INFO] 	RDBI:		0
+[0.244125 0.000756] [DDR INFO] 	WDBI:		1
+[0.245013 0.000888] [DDR INFO] 	InlineECC:	0
+[0.246593 0.001580] [DDR INFO] 	DM:		1
+[0.247670 0.001077] [DDR INFO] 	DDC:		1
+[0.248577 0.000907] [DDR INFO] 	SSCG:		0
+[0.249283 0.000706] [DDR INFO] 	BOARD:		XS_ENABLE
+[0.250971 0.001688] [DDR INFO] ddr_controller_cfg done
+[0.252257 0.001286] load ddr phy src_addr: c5400, load_addr: 802caa20, src_len: 420
+[0.254183 0.001926] ATxSlewRate	: 15f
+[0.254986 0.000803] ATxImpedance	: 7f
+[0.255733 0.000747] TxSlewRate	: 17f
+[0.256014 0.000281] TxOdtDrvStren	: 200
+[0.256325 0.000311] TxImpedanceCtrl	: e3f
+[0.256791 0.000466] CalDrvStr0	: 11
+[0.257108 0.000317] VrefInGlobal	: 104
+[0.257476 0.000368] board_type = 2 (J3_DVB)
+[0.257871 0.000395] load dqmap src addr: e0e00, load_addr: 802caa20, src_len: 20
+[0.258909 0.001038] [DDR INFO] dwc_ddrphy_train start
+[0.259537 0.000628] magic = 544f4248
+[0.259815 0.000278] load imem1 src_addr: a1a00, load_addr: 802caa20, src_len: 8000
+[0.261121 0.001306] load dmem1 src_addr: c3c00, load_addr: 802caa20, src_len: 684
+[0.263973 0.002852] executing 1D fw
+[0.264788 0.000815] ddr_init:3250#####
+[0.265311 0.000523] load imem2 src_addr: a9a00, load_addr: 802caa20, src_len: 8000
+[0.266294 0.000983] load dmem2 src_addr: c4400, load_addr: 802caa20, src_len: 564
+[0.268012 0.001718] 
+[0.268064 0.000052] *******************************************************
+[0.269760 0.001696] p_dmem_lpddr4_2d_16b->MR11_A0:43
+[0.270712 0.000952] p_dmem_lpddr4_2d_16b->MR14_A0:4c
+[0.271704 0.000992] p_dmem_lpddr4_2d_16b->MR12_A0:4c
+[0.272632 0.000928] p_dmem_lpddr4_2d_16b->MR22_A0:14
+[0.273569 0.000937] 
+[0.273620 0.000051] p_dmem_lpddr4_2d_16b->MR3_A0:b3
+[0.274553 0.000933] p_dmem_lpddr4_2d_16b->Reserved00:40
+[0.275682 0.001129] p_dmem_lpddr4_2d_16b->Reserved0E:4
+[0.276720 0.001038] p_dmem_lpddr4_2d_16b->Delay_Weight2D:20
+[0.277889 0.001169] p_dmem_lpddr4_2d_16b->Voltage_Weight2D:80
+[0.279448 0.001559] *******************************************************
+[0.280862 0.001414] 
+[0.280912 0.000050] executing 2D fw
+[0.383937 0.103025] ddr_init:3253#####
+[0.384751 0.000814] load pie src_addr: c5a00, load_addr: 802caa20, src_len: 11f0
+[0.386909 0.002158] no magic in efuse file,bypass efuse
+[0.388454 0.001545] Set QoS.
+[0.388779 0.000325] total_sz = 2048
+[0.389366 0.000587] SPL_VERSION:7
+[0.389878 0.000512] boot reason: normal
+[0.390712 0.000834] ota check count:25
+[0.392589 0.001877] uboot partition is uboot_A
+[0.393529 0.000940] load u-boot: src_addr=0x184c00, dest_addr=0x4000000, len=262144
+[0.395845 0.002316] load_bl33_img:213
+[0.406672 0.010827] load_bl33_img:215
+[0.410848 0.004176] load_bl33_img:220
+[0.411381 0.000533] load warm boot spl: addr=0x44c00, dest_addr=0x80000000, len=30208
+[0.415821 0.004440] load_warm_spl_img:291
+[0.417056 0.001235] load_warm_spl_img:293
+[0.417683 0.000627] load_warm_spl_img:307
+[0.418237 0.000554] load bl31: addr=0x104c00, dest_addr=0x0, len=82816
+[0.419588 0.001351] load_bl31_img:345
+[0.422876 0.003288] load_bl31_img:347
+[0.423459 0.000583] load_bl31_img read_bytes:14400
+[0.424410 0.000951] SFLOW_AUTH_BL31
+[0.435250 0.010840] verify signature of header:  verify ok!
+[0.446415 0.011165] verify signature of image:  verify ok!
+[0.448544 0.002129] load_bl31_img:352
+[0.449319 0.000775] bypass bpu image
+[0.449939 0.000620] clear keybank!!!!
+[0.451033 0.001094] SFLOW_DBG_EN
+[0.451660 0.000627] Trying to boot from RAM
+[0.452655 0.000995] SPL: bl31 will jump to u-boot or other entry (0x4000000)
+[0.454347 0.001692] SFLOW_CLR_KEY
+[0.454579 0.000232] SFLOW_REG_LD
+[0.454887 0.000308] install_portal copy portal
+[0.455845 0.000958] install_portal call smc and jump to bl31 cold entry(0x0)
+[0.498613 0.042768] 
+[0.498784 0.000171] 
+[0.498849 0.000065] U-Boot 2018.09-00009-g86d73f8ccd-dirty (Sep 27 2021 - 10:32:45 +0800)
+[0.500979 0.002130] 
+[0.501046 0.000067] DRAM:  system DDR size: 0x7fe00000
+[0.502446 0.001400] 2 GiB
+[0.520412 0.017966] wake up cpu: core1
+[0.521408 0.000996] MMC:   emmc host clock set 192000000.
+[0.533203 0.011795] cpu1: *** Warning - Quick boot mode, using default environment
+[0.549588 0.016385] hb_upmode=golden, hb_bootreason=normal
+[0.556831 0.007243] core0:load EMMC boot_partition=boot,command=watchdog on; mmc read 10000000 1126 2800
+[0.559319 0.002488] enable watchdog success !
+[0.560258 0.000939] 
+[0.560316 0.000058] MMC read: dev # 0, block # 4390, count 10240 ... 10240 blocks read: OK
+[0.593046 0.032730] core0 wait for env set...OK
+[0.604193 0.011147] Warning: ethernet@A5014000 address not set.
+[0.605019 0.000826] Disable cnn cores ..
+[0.606017 0.000998] base board type: J3 DVB
+[0.606687 0.000670] bootmode: EMMC
+[0.607288 0.000601] board_id = 11520000
+[0.607818 0.000530] uboot: normal boot 
+[0.608401 0.000583] boot partition: boot, system partition: system
+[0.609471 0.001070] mmc reg:5010008H=0,A1000320H=0x70
+[0.610226 0.000755] ### main_loop: bootcmd="bootm 0x10000000;"
+[0.611531 0.001305] Hit any key to stop autoboot:  0, Skip bootdelay...
+[0.613579 0.002048] ## Booting Android Image at 0x10000000 ...
+[0.615420 0.001841] Android's image name: x3j3
+[0.615857 0.000437] Kernel load addr 0x00200000 size 4771 KiB
+[0.616635 0.000778] board_type = 202
+[0.616914 0.000279] dtb_name = hobot-j3-dvb.dtb
+[0.617447 0.000533]    Uncompressing Kernel Image ...    OK
+[0.643672 0.026225]    kernel loaded to 0x00200000, end = 0x00ae9808
+[0.655287 0.011615]    Loading Device Tree to 0000000003c00000, end 0000000003c1ffff ... OK
+[0.656689 0.001402] chip_id: 0
+[0.657924 0.001235] Ion Heap type CMA Mem
+[0.658687 0.000763] Orign(MAX) bpu model Reserve Mem Size to 64M!!
+[0.685459 0.026772] waiting for salve cpu: core1 complete...OK
+[0.687365 0.001906] 
+[0.687575 0.000210] Starting kernel ...
+[0.688304 0.000729] 
+[1.428953 0.740649] Starting udev
+[1.611310 0.182357] normal APP runing mode...
+[1.612826 0.001516] /etc/init.d/appinit.sh: line 15: can't create /sys/module/kgdboc/parameters/kgdboc: nonexistent directory
+[1.835885 0.223059] [    1.025633] devfreq devfreq1: Couldn't update frequency transition information.
+[1.894217 0.058332] [    1.103781] hobot_fusa: hobot fusa fatal api start
+[1.897795 0.003578] [    1.104451] hobot_fusa: 1111period:20000000 duty:10000000
+[1.899736 0.001941] [    1.105603] fusa_fatal soc:fusa_fatal: Suc V0.1
+[2.215108 0.315372] /dev/mmcblk0p11 file system is ext4
+[2.260159 0.045051] /dev/mmcblk0p12 file system is ext4
+[2.302091 0.041932] 
+[2.303739 0.001648] Horizon Robotic System Ver:x3j3_lnx_db_20210924 release  j3dvbx3-hynix2G-3200 /dev/ttyS0
+(2021-09-27 15:51:48)===>bootrom=0.158, spl=0.340, uboot=0.189, app=1.611, console=2.304<=== num:5
+[5.516352 3.212613] j3dvbx3-hynix2G-3200 login: 
+[5.517967 0.001615] Horizon Robotic System Ver:x3j3_lnx_db_20210924 release  j3dvbx3-hynix2G-3200 /dev/ttyS0
+(2021-09-27 15:51:51)===>bootrom=0.158, spl=0.340, uboot=0.189, app=1.611, console=5.518<=== num:6
+[8.727031 3.209064] j3dvbx3-hynix2G-3200 login: root
+[8.727941 0.000910] 7[r[999;999H[6n8root@j3dvbx3-hynix2G-3200:~# root
+[8.729883 0.001942] -sh: root: not found
+[8.730445 0.000562] root@j3dvbx3-hynix2G-3200:~# reboot
+[8.797016 0.066571] [    8.007685] reboot: Restarting system with command ''
+[8.837370 0.040354] NOTICE:  fast_boot:0
+[8.838298 0.000928] 
+[8.838348 0.000050] S
+[8.838419 0.000071] F
+[8.838497 0.000078] L
+[8.840087 0.001590] O
+[8.840208 0.000121] NOTICE:  efuse cpu_cfg = 0
+[0.001463 0.001463] W
+[0.001567 0.000104] NOTICE:  Booting Trusted Firmware
+[0.002432 0.000865] NOTICE:  BL1: v1.4(release):HR-ROM-Rel-v1.1-141-ga91d4dd-dirty
+[0.004002 0.001570] NOTICE:  BL1: Built : 11:24:44, Oct 23 2019
+[0.005307 0.001305] NOTICE:  boot src: 0
+[0.024022 0.018715] NOTICE:  eMMC : 0x90
+[0.112091 0.088069] NOTICE:  BL1: Booting BL2
+[0.149009 0.036918] Auth pass
+[0.149627 0.000618] NOTICE:  bl1_main exit
+[0.150231 0.000604] SPL normal reset flow
+[0.150826 0.000595] check_reset_state (2): wakeup address = 0x0, hw wakeup status = 0x3, wakeup src=0x100
+[0.152917 0.002091] patch for sys_pll 1200 with 100M eth
+[0.154127 0.001210] SFLOW_INIT
+[0.154302 0.000175] CHIP ID:P63V45/WAFER: W06/ X: X39/ Y: Y16
+[0.156554 0.002252] secondary_jump_to_spl: secure chip flow
+[0.158158 0.001604] X3 SPL : secondary core wake up and jump to spl done (cpu_core_cfg=0)
+[0.159587 0.001429] SFLOW_FIN_HW_A
+[0.160166 0.000579] 
+[0.160219 0.000053] U-Boot SPL 2018.09-00877-gae22888d5c (Jul 09 2021 - 10:02:35 +0800)
+[0.162487 0.002268] SPACC Init - ID: (00000061)
+[0.163146 0.000659] SPL emmc boot mode (from strap)
+[0.164695 0.001549] emmc: width = 4, mclk = 96000000, sclk = 48000000
+[0.170545 0.005850] emmc div: 0x71 base+8: 0x1,width:1 width reg: 0x1
+[0.172235 0.001690] ***** using efuse ddr type ******
+[0.173100 0.000865] ddr_type = 1 (LPDDR4)
+[0.174671 0.001571] ddr_hdr.ecc_gran: 0x0
+[0.175389 0.000718] ddr_hdr.ecc_map: 0x0
+[0.175939 0.000550] ddr_hdr.sbr_pattern0: 0x0
+[0.176897 0.000958] ddr_hdr.sbr_pattern1: 0x0
+[0.177692 0.000795] ***** using efuse vendor type *****
+[0.178770 0.001078] ***************** ddr auto detect **************
+[0.181033 0.002263] no ddr pin set
+[0.181816 0.000783] detect part number: ffff
+[0.183063 0.001247] detect ddr freq: 64
+[0.183848 0.000785] board id alternative:0x0
+[0.184918 0.001070] hb_ddr_index: 5
+[0.185694 0.000776] dram_pll_init
+[0.186493 0.000799] sscg disabled 
+[0.187117 0.000624] control load ddrc src_addr: b2800, load_addr: 802caa20, src_len: 878
+[0.193527 0.006410] [DDR INFO] 	==ddr_release_info==
+[0.194598 0.001071] [DDR INFO] 	VERSION:	develop
+[0.195847 0.001249] [DDR INFO] 	BUILD:		2021-07-09-10:02
+[0.197092 0.001245] [DDR INFO] 	GIT COMMIT:	ae22888d5cffd88a7ecf060c4a07a2e9635db8c4
+[0.200754 0.003662] [DDR INFO] 	GIT TIME:	Fri, 9 Jul 2021 09:59:32 +0800
+[0.202473 0.001719] [DDR INFO] 	==ddr_features==
+[0.203113 0.000640] [DDR INFO] 	RDBI:		0
+[0.204228 0.001115] [DDR INFO] 	WDBI:		1
+[0.204811 0.000583] [DDR INFO] 	InlineECC:	0
+[0.205498 0.000687] [DDR INFO] 	DM:		1
+[0.206041 0.000543] [DDR INFO] 	DDC:		1
+[0.206783 0.000742] [DDR INFO] 	SSCG:		0
+[0.207822 0.001039] [DDR INFO] 	BOARD:		XS_ENABLE
+[0.208713 0.000891] [DDR INFO] ddr_controller_cfg done
+[0.209711 0.000998] load ddr phy src_addr: b3200, load_addr: 802caa20, src_len: 388
+[0.211970 0.002259] ATxSlewRate	: 19f
+[0.212363 0.000393] ATxImpedance	: 3f
+[0.212699 0.000336] TxSlewRate	: 19f
+[0.213044 0.000345] TxOdtDrvStren	: e00
+[0.213871 0.000827] TxImpedanceCtrl	: 63f
+[0.214250 0.000379] CalDrvStr0	: 11
+[0.214516 0.000266] VrefInGlobal	: 1bc
+[0.215270 0.000754] board_type = 2 (J3_DVB)
+[0.215833 0.000563] load dqmap src addr: e0e00, load_addr: 802caa20, src_len: 20
+[0.216914 0.001081] load pie src_addr: b3600, load_addr: 802caa20, src_len: 11f8
+[0.217928 0.001014] [DDR INFO] sdram_info_detect: 279
+[0.218535 0.000607] lpddr4 mr5 (rank=0x0, MRCTRL0=0x11, MRSTAT=0x0, MSTR=0x83080020) : 0x6060606 0x6060606 0x6060606 0x6060606
+[0.220241 0.001706] lpddr4 mr8 (rank=0x0, MRCTRL0=0x11, MRSTAT=0x0, MSTR=0x83080020) : 0x10101010 0x10101010 0x10101010 0x10101010
+[0.223537 0.003296] get_ddr_mr_info:cs_num=1, mr5=0x6, mr8=0x10
+[0.224252 0.000715] [DDR INFO] sdram cs number: 2
+[0.224715 0.000463] [DDR INFO] sdram cs number: 1
+[0.225305 0.000590] [DDR INFO] sdram cs0 mr5 value: 0x6
+[0.225887 0.000582] [DDR INFO] sdram cs1 mr5 value: 0xff
+[0.226927 0.001040] [DDR INFO] sdram cs0 mr8 value: 0x10
+[0.228420 0.001493] [DDR INFO] sdram cs1 mr8 value: 0xff
+[0.229554 0.001134] ddr_freq = 00
+[0.230021 0.000467] board id = 00
+[0.230787 0.000766] ddr datarate: 3200
+[0.231508 0.000721] ### HYNIX DDR ###
+[0.232703 0.001195] no ddr pin set
+[0.233447 0.000744] detect part number: 610
+[0.234561 0.001114] detect ddr freq: c80
+[0.235283 0.000722] board id alternative:0x0
+[0.235927 0.000644] hb_ddr_index: 11
+[0.236547 0.000620] ddr_type = 1, ddr_vendor=1, ddr_freq=3200
+[0.237873 0.001326] dram_pll_init
+[0.238337 0.000464] sscg disabled 
+[0.238795 0.000458] control load ddrc src_addr: c4a00, load_addr: 802caa20, src_len: 910
+[0.240919 0.002124] [DDR INFO] 	==ddr_release_info==
+[0.241852 0.000933] [DDR INFO] 	VERSION:	develop
+[0.242565 0.000713] [DDR INFO] 	BUILD:		2021-07-09-10:02
+[0.243525 0.000960] [DDR INFO] 	GIT COMMIT:	ae22888d5cffd88a7ecf060c4a07a2e9635db8c4
+[0.248219 0.004694] [DDR INFO] 	GIT TIME:	Fri, 9 Jul 2021 09:59:32 +0800
+[0.251396 0.003177] [DDR INFO] 	==ddr_features==
+[0.253025 0.001629] [DDR INFO] 	RDBI:		0
+[0.253817 0.000792] [DDR INFO] 	WDBI:		1
+[0.254507 0.000690] [DDR INFO] 	InlineECC:	0
+[0.255609 0.001102] [DDR INFO] 	DM:		1
+[0.256845 0.001236] [DDR INFO] 	DDC:		1
+[0.257243 0.000398] [DDR INFO] 	SSCG:		0
+[0.258105 0.000862] [DDR INFO] 	BOARD:		XS_ENABLE
+[0.259281 0.001176] [DDR INFO] ddr_controller_cfg done
+[0.260436 0.001155] load ddr phy src_addr: c5400, load_addr: 802caa20, src_len: 420
+[0.264344 0.003908] ATxSlewRate	: 15f
+[0.265887 0.001543] ATxImpedance	: 7f
+[0.266789 0.000902] TxSlewRate	: 17f
+[0.267400 0.000611] TxOdtDrvStren	: 200
+[0.268068 0.000668] TxImpedanceCtrl	: e3f
+[0.268776 0.000708] CalDrvStr0	: 11
+[0.269276 0.000500] VrefInGlobal	: 104
+[0.269791 0.000515] board_type = 2 (J3_DVB)
+[0.270474 0.000683] load dqmap src addr: e0e00, load_addr: 802caa20, src_len: 20
+[0.271933 0.001459] [DDR INFO] dwc_ddrphy_train start
+[0.273149 0.001216] magic = 544f4248
+[0.273970 0.000821] load imem1 src_addr: a1a00, load_addr: 802caa20, src_len: 8000
+[0.275598 0.001628] load dmem1 src_addr: c3c00, load_addr: 802caa20, src_len: 684
+[0.277174 0.001576] executing 1D fw
+[0.277882 0.000708] ddr_init:3250#####
+[0.278663 0.000781] load imem2 src_addr: a9a00, load_addr: 802caa20, src_len: 8000
+[0.281158 0.002495] load dmem2 src_addr: c4400, load_addr: 802caa20, src_len: 564
+[0.284479 0.003321] 
+[0.284539 0.000060] *******************************************************
+[0.286130 0.001591] p_dmem_lpddr4_2d_16b->MR11_A0:43
+[0.287002 0.000872] p_dmem_lpddr4_2d_16b->MR14_A0:4c
+[0.287913 0.000911] p_dmem_lpddr4_2d_16b->MR12_A0:4c
+[0.288973 0.001060] p_dmem_lpddr4_2d_16b->MR22_A0:14
+[0.290013 0.001040] 
+[0.290067 0.000054] p_dmem_lpddr4_2d_16b->MR3_A0:b3
+[0.290982 0.000915] p_dmem_lpddr4_2d_16b->Reserved00:40
+[0.292609 0.001627] p_dmem_lpddr4_2d_16b->Reserved0E:4
+[0.293141 0.000532] p_dmem_lpddr4_2d_16b->Delay_Weight2D:20
+[0.294345 0.001204] p_dmem_lpddr4_2d_16b->Voltage_Weight2D:80
+[0.295032 0.000687] *******************************************************
+[0.296274 0.001242] 
+[0.296330 0.000056] executing 2D fw
+[0.385702 0.089372] ddr_init:3253#####
+[0.386936 0.001234] load pie src_addr: c5a00, load_addr: 802caa20, src_len: 11f0
+[0.389770 0.002834] no magic in efuse file,bypass efuse
+[0.390849 0.001079] Set QoS.
+[0.391245 0.000396] total_sz = 2048
+[0.391725 0.000480] SPL_VERSION:7
+[0.392282 0.000557] boot reason: normal
+[0.392995 0.000713] ota check count:25
+[0.395030 0.002035] uboot partition is uboot_A
+[0.396344 0.001314] load u-boot: src_addr=0x184c00, dest_addr=0x4000000, len=262144
+[0.398716 0.002372] load_bl33_img:213
+[0.408834 0.010118] load_bl33_img:215
+[0.413519 0.004685] load_bl33_img:220
+[0.414437 0.000918] load warm boot spl: addr=0x44c00, dest_addr=0x80000000, len=30208
+[0.417793 0.003356] load_warm_spl_img:291
+[0.418280 0.000487] load_warm_spl_img:293
+[0.418895 0.000615] load_warm_spl_img:307
+[0.419525 0.000630] load bl31: addr=0x104c00, dest_addr=0x0, len=82816
+[0.420735 0.001210] load_bl31_img:345
+[0.425416 0.004681] load_bl31_img:347
+[0.425790 0.000374] load_bl31_img read_bytes:14400
+[0.426890 0.001100] SFLOW_AUTH_BL31
+[0.437102 0.010212] verify signature of header:  verify ok!
+[0.448779 0.011677] verify signature of image:  verify ok!
+[0.449971 0.001192] load_bl31_img:352
+[0.450531 0.000560] bypass bpu image
+[0.451068 0.000537] clear keybank!!!!
+[0.451562 0.000494] SFLOW_DBG_EN
+[0.453590 0.002028] Trying to boot from RAM
+[0.454585 0.000995] SPL: bl31 will jump to u-boot or other entry (0x4000000)
+[0.457355 0.002770] SFLOW_CLR_KEY
+[0.458294 0.000939] SFLOW_REG_LD
+[0.458815 0.000521] install_portal copy portal
+[0.459948 0.001133] install_portal call smc and jump to bl31 cold entry(0x0)
+[0.500849 0.040901] 
+[0.501050 0.000201] 
+[0.501127 0.000077] U-Boot 2018.09-00009-g86d73f8ccd-dirty (Sep 27 2021 - 10:32:45 +0800)
+[0.503440 0.002313] 
+[0.503506 0.000066] DRAM:  system DDR size: 0x7fe00000
+[0.504930 0.001424] 2 GiB
+[0.522345 0.017415] wake up cpu: core1
+[0.523309 0.000964] MMC:   emmc host clock set 192000000.

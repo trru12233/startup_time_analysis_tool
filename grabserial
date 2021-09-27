@@ -10,6 +10,7 @@ import time
 import datetime
 import re
 from colorama import init, Fore
+from power_control import power_control
 
 VERSION = (1, 9, 8)
 
@@ -20,7 +21,6 @@ except ImportError:
 
 verbose = 0
 cmdinput = u""
-
 
 def vprint(message):
     if verbose:
@@ -37,7 +37,8 @@ def usage(rcode):
     Usage: %s [options]
 options:
     -h, --help             Print this message
-    -d, --device=<devpath> Set the device to read (default '/dev/ttyS0')
+    -d, --device=<devpath> Set the device to read (default '/dev/ttyUSB0')
+    -r, --relay=<com_port> Set relay com port(default '/dev/ttyUSB1')
     -b, --baudrate=<val>   Set the baudrate (default 115200)
     -B <val>               Force the baudrate to the indicated value
                              (grabserial won't check if the baudrate is legal)
@@ -45,7 +46,6 @@ options:
     -p, --parity=<val>     Set the parity (default N)
     -s, --stopbits=<val>   Set the stopbits (default 1)
     -x, --xonxoff          Enable software flow control (default off)
-    -r, --rtscts           Enable RTS/CTS flow control (default off)
     -f, --force-reset      Force pyserial to reset device parameters
     -e, --endtime=<secs>   End the program after the specified seconds have
                            elapsed.
@@ -128,7 +128,17 @@ def read_input():
     while 1:
         time.sleep(1)
 
+def run_reboot(sd):
+    sd.write((u"\n").encode("utf8"))
+    sd.flush()
+    time.sleep(0.2)
+    sd.write(("root"+u"\n" + "reboot"+u"\n").encode("utf8"))
+    sd.flush()
 
+def relay_reboot(power):
+    power.off_all()
+    time.sleep(3)
+    power.open_all()
 # grab - main routine to grab a serial port and time the output of each line
 # takes a list of arguments, as they would have been passed in sys.argv
 # that is, a list of strings.
@@ -145,7 +155,7 @@ def grab(arglist, outputfd=sys.stdout):
     try:
         opts, args = getopt.getopt(
                         arglist,
-                        "hli:d:b:B:w:p:s:xrfc:taTm:e:o:QvVq:S", [
+                        "hli:d:b:B:w:p:s:xr:fc:taTm:e:o:QvVq:S", [
                             "help",
                             "launchtime",
                             "instantpat=",
@@ -155,7 +165,7 @@ def grab(arglist, outputfd=sys.stdout):
                             "parity=",
                             "stopbits=",
                             "xonxoff",
-                            "rtscts",
+                            "relayport=",
                             "force-reset",
                             "command=",
                             "time",
@@ -191,7 +201,7 @@ def grab(arglist, outputfd=sys.stdout):
     show_time = 0
     show_systime = 0
     basepat = ""
-    log_bootrom = "NOTICE:  fast_boot:0"
+    log_bootrom = "NOTICE:  efuse cpu_cfg"
     log_spl = "U-Boot SPL"
     log_uboot = "U-Boot 2018.09-00009"
     log_kernel = "Starting kernel"
@@ -204,6 +214,7 @@ def grab(arglist, outputfd=sys.stdout):
     endtime = 0
     out_filename = None
     out = None
+    res_log = None
     command = ""
     skip_device_check = 0
     cr_to_nl = 0
@@ -223,6 +234,8 @@ def grab(arglist, outputfd=sys.stdout):
                 sd.close()
                 usage(2)
             sd.port = device
+        if opt in ["-r", "--relayport"]:
+            relay_port = arg
         if opt in ["-b", "--baudrate"]:
             baud = int(arg)
             if baud not in sd.BAUDRATES:
@@ -262,8 +275,6 @@ def grab(arglist, outputfd=sys.stdout):
             command = arg
         if opt in ["-x", "--xonxoff"]:
             sd.xonxoff = True
-        if opt in ["-r", "--rtscts"]:
-            sd.rtscts = True
         if opt in ["-f", "--force-set"]:
             force = True
         if opt in ["-t", "--time"]:
@@ -314,7 +325,7 @@ def grab(arglist, outputfd=sys.stdout):
         basepat = log_bootrom
     # if verbose, show what our settings are
     if sd.port:
-        vprint("Opening serial port %s" % sd.port)
+        vprint("Serial port %s" % sd.port)
         vprint(
             "%d:%d%s%s:xonxoff=%d:rtscts=%d" %
             (sd.baudrate, sd.bytesize, sd.parity, sd.stopbits,
@@ -322,28 +333,33 @@ def grab(arglist, outputfd=sys.stdout):
     else:
         print("Error: Missing serial port to read from")
         usage(2)
+    if relay_port != "UNUSE":
+        vprint("Relay port %s" % relay_port)
+    else:
+        vprint("not use relay")
+        use_realy = False
     if endtime and not restart:
         vprint("Program set to end in %s seconds" % endstr)
     if endtime and restart:
         vprint("Program set to restart after %s seconds." % endstr)
     if show_time:
-        vprint("Printing timing information for each line")
+        vprint("===================Horizon Robotics================")
     if show_systime:
         vprint("Printing absolute timing information for each line")
     if basepat:
         vprint("Matching pattern '%s' to set base time" % basepat)
     if log_bootrom:
-        vprint("Horizon Robotics bootrom start log:'%s'" % log_bootrom)
+        vprint("bootrom start log:'%s'" % log_bootrom)
     if log_spl:
-        vprint("Horizon Robotics SPL start log:'%s'" % log_spl)
+        vprint("SPL start log:'%s'" % log_spl)
     if log_uboot:
-        vprint("Horizon Robotics U-Boot start log:'%s'" % log_uboot)
+        vprint("U-Boot start log:'%s'" % log_uboot)
     if log_kernel:
-        vprint("Horizon Robotics U-Boot finish log:'%s'" % log_kernel)
+        vprint("U-Boot finish log:'%s'" % log_kernel)
     if log_app:
-        vprint("Horizon Robotics appinit start log:'%s'" % log_app)
+        vprint("appinit start log:'%s'" % log_app)
     if log_console:
-        vprint("Horizon Robotics console start log:'%s'" % log_console)
+        vprint("console start log:'%s'" % log_console)
     if instantpat:
         vprint("Instant pattern '%s' to report time of at end of run" % instantpat)
     if quitpat:
@@ -355,6 +371,7 @@ def grab(arglist, outputfd=sys.stdout):
             # open in binary mode, to pass through data as unmodified
             # as possible
             out = open(out_filename, "wb")
+            res_log = open("res.log", "wb")
         except IOError:
             print("Can't open output file '%s'" % out_filename)
             sys.exit(1)
@@ -372,7 +389,7 @@ def grab(arglist, outputfd=sys.stdout):
     time_uboot = 0
     time_app = 0
     time_all = 0
-
+    console_reay = False
     newline = 1
     curline = ""
     vprint("Use Control-C to stop...")
@@ -392,7 +409,15 @@ def grab(arglist, outputfd=sys.stdout):
     sd.flushOutput()
     # Initialize a colored font
     init(autoreset=True)
-
+    
+    #Relay setting
+    mode = 3
+    port = 0
+    onoff = 'on'
+    if use_realy:
+        power = power_control(mode, relay_port)
+        power.off_all()
+        time.sleep(2)
     if command:
         sd.write((command + u"\n").encode("utf8"))
         sd.flush()
@@ -405,6 +430,7 @@ def grab(arglist, outputfd=sys.stdout):
 
     stop_reason = "grabserial stopped for an unknown reason"
     # read from the serial port until something stops the program
+    run_reboot(sd)
     while 1:
         try:
             if cmdinput:
@@ -423,6 +449,8 @@ def grab(arglist, outputfd=sys.stdout):
                         datetime.datetime.now().strftime("%H:%M:%S.%f"))
                     if out:
                         out.close()
+                    if res_log:
+                        res_log.close()
                     sd.close()
                     os.execv(sys.executable, ['python'] + sys.argv)
                 stop_reason = "grabserial stopped due to time expiration"
@@ -524,31 +552,42 @@ def grab(arglist, outputfd=sys.stdout):
                     prev1 = 0
                 if log_bootrom and re.match(log_bootrom, curline):
                     time_stage = linetime
-                if log_spl and re.match(log_spl, curline):
+                elif log_spl and re.match(log_spl, curline):
                     time_bootrom = linetime-time_stage
                     time_stage = linetime
-                if log_uboot and re.match(log_uboot, curline):
+                elif log_uboot and re.match(log_uboot, curline):
                     time_spl = linetime-time_stage
                     time_stage = linetime
-                if log_kernel and re.match(log_kernel, curline):
+                elif log_kernel and re.match(log_kernel, curline):
                     time_uboot = linetime-time_stage
                     time_stage = linetime
-                if log_app and re.match(log_app, curline):
+                elif log_app and re.match(log_app, curline):
                     time_app = linetime-basetime
-                if log_console and re.match(log_console, curline):
-                    success_num += 1
+                elif log_console and re.match(log_console, curline) and time_stage != 0:
                     time_all = linetime-basetime
-                    res = "[%s]===>bootrom=%4.3f, spl=%4.3f, uboot=%4.3f, app=%4.3f, console=%4.3f<=== num:%d" % (
-                        time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
-                        time_bootrom, time_spl, time_uboot, time_app, time_all, success_num)
+                    success_num = success_num+1
+                    res = "(%s)===>bootrom=%4.3f, spl=%4.3f, uboot=%4.3f, app=%4.3f, console=%4.3f<=== num:%d" % (
+                    time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+                    time_bootrom, time_spl, time_uboot, time_app, time_all, success_num)
                     sprint(res)
                     if out:
-                        out.write(res.encode(sys.stdout.encoding))
+                        out.write(res.encode(sys.stdout.encoding)+'\r\n')
+                        out.flush()
+                    if res_log:
+                        res_log.write(res.encode(sys.stdout.encoding)+'\r\n')
+                        out.flush()
+                    time.sleep(3)
+                    if use_realy:
+                        relay_reboot(power)
+                    else:
+                        run_reboot(sd)
 
                 curline = ""
             sys.stdout.flush()
             if out:
                 out.flush()
+            if res_log:
+                res_log.flush()
         # FIXTHIS - maybe add 'except KeyboardInterrupt' here
         except EnvironmentError:
             stop_reason = "grabserial stopped due to some external error"
@@ -571,7 +610,8 @@ def grab(arglist, outputfd=sys.stdout):
 
     if out:
         out.close()
-
+    if res_log:
+        res_log.close()
     vprint(stop_reason)
 
 
